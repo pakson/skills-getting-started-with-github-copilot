@@ -126,13 +126,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (resp.ok) {
         messageDiv.textContent = result.message || "Unregistered";
-        messageDiv.className = "success";
+        messageDiv.className = "message success";
         messageDiv.classList.remove("hidden");
         // refresh activities list
         fetchActivities();
       } else {
         messageDiv.textContent = result.detail || "Failed to unregister";
-        messageDiv.className = "error";
+        messageDiv.className = "message error";
         messageDiv.classList.remove("hidden");
       }
 
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       console.error("Error unregistering:", err);
       messageDiv.textContent = "Failed to unregister. Try again.";
-      messageDiv.className = "error";
+      messageDiv.className = "message error";
       messageDiv.classList.remove("hidden");
     }
   });
