@@ -3,10 +3,6 @@ from fastapi.testclient import TestClient
 import src.app as app_module
 
 
-@pytest.fixture
-def client():
-    with TestClient(app_module.app) as c:
-        yield c
 
 
 def test_get_activities(client):
