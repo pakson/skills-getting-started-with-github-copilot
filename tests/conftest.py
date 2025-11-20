@@ -21,3 +21,9 @@ def reset_activities():
 async def async_client():
     async with AsyncClient(app=app_module.app, base_url="http://testserver") as ac:
         yield ac
+
+@pytest.fixture
+def client():
+    # Synchronous TestClient fixture expected by tests in test_activities.py
+    from fastapi.testclient import TestClient
+    return TestClient(app_module.app)
