@@ -3,6 +3,3 @@ uvicorn
 pytest
 pytest-asyncio
 httpx
-pytest
-httpx
-pytest-asyncio
